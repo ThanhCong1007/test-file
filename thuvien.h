@@ -50,3 +50,4 @@ int tinhSoBacVao(DANHSACHKE, int);
 int tinhSoBacRa(DANHSACHKE , int );
 //Ham tinh so bac  cua mot dinh VoHUONG
 int tinhBacVH(DANHSACHKE dsk, int dinh);
+DANHSACHCANH tapCanhVH(DANHSACHKE dsk);

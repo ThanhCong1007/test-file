@@ -61,7 +61,10 @@ int main() {
 			cout << "\nSo bac  cua dinh " << dinh << " la: " << tinhBacVH(dsk, dinh);
 			break;
 		case 8:
-			
+			dsc= tapCanhVH(dsk);
+			for (int i = 0; i < dsc.n; i++) {
+			xuatCanh(dsc.ds[i]);
+			}
 			break;
 		}
 		cout << endl;
