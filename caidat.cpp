@@ -120,3 +120,33 @@ int tinhBacVH(DANHSACHKE dsk, int dinh) {
 	}
 	return dem;
 }
+DANHSACHCANH tapCanhVH(DANHSACHKE dsk) {
+	DANHSACHCANH dsc;
+	bool flag = false;
+	for (int i = 0; i < dsk.n; i++) {
+		NODE* p = dsk.dsk[i];
+		while (p != NULL) {
+			CANH c = { i, p->dinhke, p->trongso };	
+			if (flag == false)
+			{
+				dsc.ds[dsc.n] = c;
+				dsc.n++;
+				flag = true;
+			}
+			else
+			{
+				bool Co = false;
+				for (int j = 0; j < dsc.n; j++)
+				{
+					if (p->dinhke == dsc.ds[j].dau&&i == dsc.ds[j].cuoi) {
+						Co = true;		
+					}
+				}
+				if (Co == false) {
+					dsc.ds[dsc.n] = c;
+					dsc.n++;
+				}
+			}p = p->link;
+		}
+	}return dsc;
+}
